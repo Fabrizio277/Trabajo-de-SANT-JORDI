@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear rosa virtual</title>
+  <link rel="icon" href="assets/img/rose.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="inner-page">
+  <header class="simple-header wrapper">
+    <a class="brand" href="index.html">
+      <img src="assets/img/rose.svg" alt="Rosa">
+      <span>Rosa de Sant Jordi</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Inici</a>
+      <a href="galeria.html">Exemples</a>
+    </nav>
+  </header>
+
+  <main class="wrapper form-layout">
+    <section class="form-intro">
+      <p class="eyebrow">Crea la teva dedicatòria</p>
+      <h1>Una targeta romàntica amb estil senzill i elegant.</h1>
+      <p>
+        Només heu d'escriure els noms, triar el to i generar la rosa. La frase es selecciona aleatòriament
+        d'una col·lecció inspirada en dedicatòries típiques de Sant Jordi.
+      </p>
+    </section>
+
+    <section class="form-card large">
+      <form id="roseForm" class="rose-form">
+        <div class="field-row">
+          <div class="field">
+            <label for="fromName">De</label>
+            <input id="fromName" name="fromName" type="text" maxlength="30" placeholder="Ex: Marc" required>
+          </div>
+          <div class="field">
+            <label for="toName">Per a</label>
+            <input id="toName" name="toName" type="text" maxlength="30" placeholder="Ex: Júlia" required>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="tone">To de la dedicatòria</label>
+            <select id="tone" name="tone">
+              <option value="romantic">Romàntic</option>
+              <option value="sweet">Dolç</option>
+              <option value="poetic">Poètic</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="style">Estil visual</label>
+            <select id="style" name="style">
+              <option value="classic">Clàssic</option>
+              <option value="blush">Rosa suau</option>
+              <option value="forest">Verd elegant</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="customMessage">Missatge personal opcional</label>
+          <textarea id="customMessage" name="customMessage" maxlength="140" placeholder="Ex: Feliç Sant Jordi, gràcies per fer-me somriure cada dia."></textarea>
+          <small>Si ho deixeu buit, la web generarà una frase aleatòria.</small>
+        </div>
+
+        <div class="preview-mini" id="livePreview">
+          <div class="preview-mini-card classic">
+            <span>🌹</span>
+            <h3>Per a algú especial</h3>
+            <p>La targeta es veurà aquí mentre ompliu el formulari.</p>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="button primary" type="submit">Generar rosa</button>
+          <button class="button secondary ghost" type="reset" id="resetBtn">Netejar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="assets/js/frases.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

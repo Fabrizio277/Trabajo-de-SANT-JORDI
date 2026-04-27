@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La teva rosa virtual</title>
+  <link rel="icon" href="assets/img/rose.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="inner-page rose-page">
+  <header class="simple-header wrapper">
+    <a class="brand" href="index.html">
+      <img src="assets/img/rose.svg" alt="Rosa">
+      <span>Rosa de Sant Jordi</span>
+    </a>
+    <nav class="nav-links">
+      <a href="crear.html">Crear una altra</a>
+      <a href="galeria.html">Exemples</a>
+    </nav>
+  </header>
+
+  <main class="wrapper rose-layout">
+    <section class="rose-card-display" id="roseCardContainer"></section>
+
+    <aside class="rose-side-panel">
+      <div class="side-card">
+        <p class="eyebrow">Comparteix-la</p>
+        <h2>La vostra rosa ja està llesta.</h2>
+        <p>Copieu l'enllaç i envieu-lo. La targeta es reconstrueix directament des de la URL.</p>
+        <div class="share-box">
+          <input type="text" id="shareUrl" readonly>
+          <button class="button primary small" id="copyBtn" type="button">Copiar</button>
+        </div>
+        <div class="mini-actions">
+          <a class="button secondary" href="crear.html">Crear una altra</a>
+          <a class="button ghost" href="galeria.html">Veure exemples</a>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="assets/js/frases.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
